@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+@import url('./style.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.dropdown-content.open {
+  display: block;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  font-size: 24px !important;
+}
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
+  color: #E7ECF3 !important;
+}
+
+.css-j204z7-MuiFormControlLabel-root {
+  display: block !important;
+  max-width: 290px;
+  max-height: 24px;
+  margin-top: 14px;
+}
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked {
+  color: #145CE6 !important;
+}
+
+.css-187mznn-MuiSlider-root {
+  padding: 6px 0 !important;
+  width: 200px !important;
+  height: 6px !important;
+  margin-top: 50px;
+}
+
+.css-14pt78w-MuiSlider-rail {
+  background-color: #E9EDF1 !important;
+  border-radius: 3.0435px !important;
+}
+
+.css-1gv0vcd-MuiSlider-track{
+  background-color: #316BFF !important;
+}
+
+.css-eg0mwd-MuiSlider-thumb {
+  width: 16px !important;
+  height: 16px !important;
+  background-color: #316BFF !important;
+}
+
+/* .css-1s2u09g-control {
+  background-color: transparent !important;
+  border-color: none !important;
+  border-radius: 0 !important;
+  border-style: none !important;
+  min-height: 20px !important;
+}
+
+.css-1pahdxg-control {
+  background-color: transparent !important;
+  border-color: none !important;
+  border-radius: 0 !important;
+  border-style: none !important;
+  border-width: 0 !important;
+  box-shadow: none !important;
+  min-height: 20px !important;
+}
+
+.css-319lph-ValueContainer {
+  padding: 0 !important;
+}
+
+.css-14el2xx-placeholder {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.css-6j8wv5-Input {
+  margin: 0 !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+.css-1hb7zxy-IndicatorsContai {
+  display: none;
+}
+
+.css-1hb7zxy-IndicatorsContainer {
+  display: none !important;
+}
+
+#react-select-3-listbox {
+  padding: 20px 50px 20px 20px !important;
+  background-color: #FFFFFF !important;
+  border: 1px solid #F4F5F6 !important;
+  box-shadow: 0px 12px 60px rgba(89, 89, 89, 0.1) !important;
+  border-radius: 20px !important;
+} */
