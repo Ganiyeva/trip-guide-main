@@ -66,7 +66,7 @@ const HotelList = () => {
         <Filter />
         <Col>
           {error && <div className="content-401"> {error} </div>}
-          {!error && hotel.map(el => (<HotelListCard key={el.id} hotelObj={el} />)).splice(0, 3)}
+          {!error && hotel.map(el => (<HotelListCard key={el.id} hotelObj={el} />))}
           <ViewBtn type="button"> <Icon className="icon-viewall" /> View All </ViewBtn>
         </Col>
       </Row>
