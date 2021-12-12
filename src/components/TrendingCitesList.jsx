@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import { useTranslation } from 'react-i18next';
+import { useState, useEffect } from "react";
+import apiCalls from '../config/api';
 import { Row2 } from '../styled';
 import TrendingCitesCard from "./TrendingCitesCard";
+import Loader from "./Loader";
 
-const PageContent = styled.section`
+const TrendingContent = styled.section`
   padding: 69px 0;
   background-color: ${(props) => props.theme.color17};
 `;
@@ -37,22 +40,38 @@ const Card = styled.div`
 const TrendingCitesList = () => {
 
   const { t } = useTranslation();
+  const [trending, setTrending] = useState([]);
+  const [error, setError] = useState(undefined);
+  const [isLoading, setIsLoading] = useState(true);
 
-  return (
-    <PageContent>
+  useEffect(() => {
+    const Trending = async () => {
+      try {
+        const data = await apiCalls.getCities();
+        setTrending(data);
+        setIsLoading(false);
+      } catch (error) {
+        setError(error.message);
+        setIsLoading(false);
+      }
+    }
+    setIsLoading(true);
+    Trending();
+  }, []);
+
+  if (isLoading)
+    return (<Loader />);
+  else return (
+    <TrendingContent>
       <Title> {t('trendinTitle')} </Title>
       <Text> {t('trendinText')} </Text>
-      <Card>
+      {error && <div className="content-401"> {error} </div>}
+      {!error && <Card>
         <Row2>
-          <TrendingCitesCard />
-          <TrendingCitesCard />
-          <TrendingCitesCard />
-          <TrendingCitesCard />
-          <TrendingCitesCard />
-          <TrendingCitesCard />
+          {trending.map(el => (<TrendingCitesCard key={el.id} trendObj={el} />))}
         </Row2>
-      </Card>
-    </PageContent>
+      </Card>}
+    </TrendingContent>
   );
 };
 

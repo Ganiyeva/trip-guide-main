@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useTranslation } from 'react-i18next';
 import { Container, Row, PageTitle, Star } from '../styled';
 
-const PageContent = styled.section`
+const PassionContent = styled.section`
   padding: 70px 0 244px 0;
 `;
 
@@ -19,7 +19,7 @@ const Col = styled.div`
   position: relative;
   width: 270px;
   height: 323px;
-  margin-top: 42px;
+  margin: 42px 15px 15px;
   border-radius: 15px;
   overflow: hidden;
 `;
@@ -64,46 +64,46 @@ const Passion = () => {
   const { t } = useTranslation();
 
   return (
-    <PageContent>
+    <PassionContent>
       <Container>
         <PageTitle> {t('passionTitle')} </PageTitle>
         <Text> {t('passionText')} </Text>
         <Row>
-          <Col className="beachImg">
+          <Col style={{ backgroundImage: "url('/img/passion1.jpg')", backgroundSize: "contain", backgroundRepeat: "no-repeat" }}>
             <Card>
               <span>
                 <ColTitle> {t('beach')} </ColTitle>
-                <Rating> <Star className="icon-star" style={{fontSize: "18px"}} /> {t('reviews')} </Rating>
+                <Rating> <Star className="icon-star" style={{ fontSize: "18px" }} /> {t('reviews')} </Rating>
               </span>
             </Card>
           </Col>
-          <Col className="cityImg">
+          <Col style={{ backgroundImage: "url('/img/passion2.jpg')", backgroundSize: "contain", backgroundRepeat: "no-repeat" }}>
             <Card>
               <span>
                 <ColTitle> {t('city')} </ColTitle>
-                <Rating> <Star className="icon-star" style={{fontSize: "18px"}} /> {t('reviews')} </Rating>
+                <Rating> <Star className="icon-star" style={{ fontSize: "18px" }} /> {t('reviews')} </Rating>
               </span>
             </Card>
           </Col>
-          <Col className="hikingImg">
+          <Col style={{ backgroundImage: "url('/img/passion3.jpg')", backgroundSize: "contain", backgroundRepeat: "no-repeat" }}>
             <Card>
               <span>
                 <ColTitle> {t('hiking')} </ColTitle>
-                <Rating> <Star className="icon-star" style={{fontSize: "18px"}} /> {t('reviews')} </Rating>
+                <Rating> <Star className="icon-star" style={{ fontSize: "18px" }} /> {t('reviews')} </Rating>
               </span>
             </Card>
           </Col>
-          <Col className="sportsImg">
+          <Col style={{ backgroundImage: "url('/img/passion4.jpg')", backgroundSize: "contain", backgroundRepeat: "no-repeat" }}>
             <Card>
               <span>
                 <ColTitle> {t('sports')} </ColTitle>
-                <Rating> <Star className="icon-star" style={{fontSize: "18px"}} /> {t('reviews')} </Rating>
+                <Rating> <Star className="icon-star" style={{ fontSize: "18px" }} /> {t('reviews')} </Rating>
               </span>
             </Card>
           </Col>
         </Row>
       </Container>
-    </PageContent>
+    </PassionContent>
   );
 }
 

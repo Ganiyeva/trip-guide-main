@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Container } from '../styled';
 import { useRef } from "react";
 
-const PageContent = styled.div`
+const SubscribeContent = styled.div`
   position: relative;
   margin-top: -124px;
   z-index: 1;
@@ -105,9 +105,9 @@ const Subscribe = () => {
   };
 
   return (
-    <PageContent>
+    <SubscribeContent>
       <Container>
-        <BgImg className="subBgImg">
+        <BgImg style={{ backgroundImage: "url('/img/subscribe.svg')", backgroundSize: "contain", backgroundRepeat: "no-repeat" }}>
           <Row>
             <div>
               <Title> {t('subTitle')} </Title>
@@ -124,7 +124,7 @@ const Subscribe = () => {
           </Row>
         </BgImg>
       </Container>
-    </PageContent>
+    </SubscribeContent>
   );
 };
 

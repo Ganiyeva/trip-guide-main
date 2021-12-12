@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useTranslation } from 'react-i18next';
 import { Container, PageTitle, Box } from '../styled';
 
-const PageContent = styled.section`
+const DestinationContent = styled.section`
   padding: 40px 0 35px;
 `;
 
@@ -105,13 +105,13 @@ const Destinations = () => {
   const { t } = useTranslation();
 
   return (
-    <PageContent>
+    <DestinationContent>
       <Container>
         <PageTitle> {t('destinationsTitle')} </PageTitle>
         <PageText> {t('destinationsText')} </PageText>
         <Grid1>
           <Grid2>
-            <Img1 className="img1">
+            <Img1 style={{ backgroundImage: "url('/img/destinations1.png')", backgroundSize: "contain", backgroundRepeat: "no-repeat" }}>
               <Rating> 3.5 </Rating>
               <Box>
                 <div>
@@ -121,7 +121,7 @@ const Destinations = () => {
                 </div>
               </Box>
             </Img1>
-            <Img2 className="img2">
+            <Img2 style={{ backgroundImage: "url('/img/destinations2.png')", backgroundSize: "contain", backgroundRepeat: "no-repeat" }}>
               <Rating> 3.5 </Rating>
               <Box>
                 <div>
@@ -131,7 +131,7 @@ const Destinations = () => {
                 </div>
               </Box>
             </Img2>
-            <Img3 className="img3">
+            <Img3 style={{ backgroundImage: "url('/img/destinations3.png')", backgroundSize: "contain", backgroundRepeat: "no-repeat" }}>
               <Rating> 3.5 </Rating>
               <Box>
                 <div>
@@ -143,7 +143,7 @@ const Destinations = () => {
             </Img3>
           </Grid2>
           <Grid3>
-            <Img4 className="img4">
+            <Img4 style={{ backgroundImage: "url('/img/destinations4.png')", backgroundSize: "contain", backgroundRepeat: "no-repeat" }}>
               <Rating> 3.5 </Rating>
               <Box>
                 <div>
@@ -153,7 +153,7 @@ const Destinations = () => {
                 </div>
               </Box>
             </Img4>
-            <Img5 className="img5">
+            <Img5 style={{ backgroundImage: "url('/img/destinations5.png')", backgroundSize: "contain", backgroundRepeat: "no-repeat" }}>
               <Rating> 3.5 </Rating>
               <Box>
                 <div>
@@ -163,7 +163,7 @@ const Destinations = () => {
                 </div>
               </Box>
             </Img5>
-            <Img6 className="img6">
+            <Img6 style={{ backgroundImage: "url('/img/destinations6.png')", backgroundSize: "contain", backgroundRepeat: "no-repeat" }}>
               <Rating> 3.5 </Rating>
               <Box>
                 <div>
@@ -176,7 +176,7 @@ const Destinations = () => {
           </Grid3>
         </Grid1>
       </Container>
-    </PageContent>
+    </DestinationContent>
   );
 };
 

@@ -6,8 +6,7 @@ const Col = styled.div`
   height: 495px;
   padding: 35px 30px;
   border-radius: 16px;
-  overflow: hidden;
-  margin-top: 61px;
+  margin: 61px 15px 15px;
 `;
 
 const Country = styled.span`
@@ -43,15 +42,15 @@ const Places = styled.span`
   margin-top: 8px;
 `;
 
-const TopTourCard = () => {
+const TopTourCard = ({ topObj }) => {
 
   return (
-    <Col className="img7">
-      <Country> Japan </Country>
+    <Col style={{ backgroundImage:`url(/img/${topObj.photo})`}}>
+      <Country> {topObj.country} </Country>
       <Box>
         <div>
-          <Name> Japan </Name>
-          <Places> 10 Popular Places </Places>
+          <Name> {topObj.name} </Name>
+          <Places> {topObj.place_count} Popular Places </Places>
         </div>
       </Box>
     </Col>

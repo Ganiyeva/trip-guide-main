@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useTranslation } from 'react-i18next';
-import {Container} from '../styled'
+import { Container } from '../styled'
 
 const BgImg = styled.div`
   padding: 217px 0;
@@ -27,10 +27,10 @@ const Title = styled.h1`
 
 const Intro = () => {
   const { t } = useTranslation();
-  return(
-    <BgImg className="bgimg">
+  return (
+    <BgImg style={{ backgroundImage: "url('/img/background.jpg')", backgroundSize: "contain", backgroundRepeat: "no-repeat" }}>
       <Container>
-      <Title> {t('pageTitle')} </Title>
+        <Title> {t('pageTitle')} </Title>
       </Container>
     </BgImg>
   );

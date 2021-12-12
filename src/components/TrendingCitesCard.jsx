@@ -57,17 +57,17 @@ const Btn = styled.button`
   font-size: 14px;
   line-height: 18px;
   color: #FFFFFF;
-  margin-top: 24px;
+  margin: 18px 0 0;
 `;
 
-const TrendingCitesCard = () => {
+const TrendingCitesCard = ({ trendObj }) => {
   return (
     <Col>
-      <Img src="/img/trending-cites.jpg" alt="" />
+      <Img src={`/img/${trendObj.photo}`} alt={trendObj.name} />
       <span style={{ display: "inline-block", verticalAlign: "middle" }}>
-        <Name> Manila </Name>
-        <Rating> <Star className="icon-star" style={{ fontSize: "14px" }} /> 4.91 (147)</Rating>
-        <Price> $250.00 <Rating style={{ display: "inline-block", marginTop: "0", verticalAlign: "middle" }}>/night</Rating> </Price>
+        <Name> {trendObj.name} </Name>
+        <Rating> <Star className="icon-star" style={{ fontSize: "14px" }} /> {trendObj.rating} </Rating>
+        <Price> ${trendObj.price} <Rating style={{ display: "inline-block", marginTop: "0", verticalAlign: "middle" }}>/night</Rating> </Price>
         <Btn type="button"> Book Now </Btn>
       </span>
     </Col>

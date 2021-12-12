@@ -7,7 +7,6 @@ import TopTourList from '../components/TopTourList';
 import ExploreList from '../components/ExploreList';
 import TrendingCitesList from '../components/TrendingCitesList';
 import Passion from '../components/Passion';
-import Subscribe from '../components/Subscribe';
 
 const Home = () => {
   return (
@@ -20,7 +19,6 @@ const Home = () => {
       <ExploreList />
       <TrendingCitesList />
       <Passion />
-      <Subscribe />
     </div>
   );
 }

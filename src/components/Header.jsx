@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Logo } from "../styled";
 
-const HeaderPage = styled.header`
+const HeaderContent = styled.header`
   position: fixed;
   top: 0;
   right: 0;
@@ -123,7 +123,8 @@ const MyProfileBtn = styled.button`
 const Header = () => {
 
   const { t } = useTranslation();
-  const [language, setLanguage] = useState('en');
+  const currentLang = localStorage.getItem('i18nextLng');
+  const [language, setLanguage] = useState(currentLang ? currentLang : 'en');
   const [currency, setCurrency] = useState('USD');
 
   const [currencyActive, setCurrencyActive] = useState(false);
@@ -144,8 +145,8 @@ const Header = () => {
 
 
   return (
-    <HeaderPage>
-      <Link to='/' style={{textDecoration: 'none'}}> <img style={{verticalAlign: 'middle'}} src="/img/logo.svg" alt="logo" /> <Logo> TripGuide </Logo> </Link>
+    <HeaderContent>
+      <Link to='/' style={{ textDecoration: 'none' }}> <img style={{ verticalAlign: 'middle' }} src="/img/logo.svg" alt="logo" /> <Logo> TripGuide </Logo> </Link>
       <Drops>
         <Dropdown className="dropdown" onClick={handleCurrency}>
           <CurrencyBtn type="button"> {currency} </CurrencyBtn>
@@ -173,7 +174,7 @@ const Header = () => {
           </DropdownContent>
         </Dropdown>
       </Drops>
-    </HeaderPage>
+    </HeaderContent>
   );
 }
 

@@ -84,5 +84,20 @@
   "checkLiving": "Mehmonxona",
   "checkService": "Xona xizmati",
   "checkPool": "Suzish xavzasi",
-  "checkSpa": "Spa"
+  "checkSpa": "Spa",
+  "detailTitle": "Uydagi eksklyuziv xona",
+  "description": "Tavsif",
+  "features": "Xususiyatlari",
+  "roomPrice": "Xona va narx",
+  "detailRev": "Ko`rib chiqish",
+  "descripInfo": "Arabian Park Hotel Dubayda 3 yulduzli mehmonxona qidirayotgan sayohatchilar uchun ajoyib tanlovdir. U Bur Dubay hududida joylashgan. Bu mehmonxona eng ko'p tavsiya etilganlardan biri sifatida ajralib turadi. 2 km, Al Wasl Indoor Stadium (1,2 km), Dubai Mall (5,4 km), Jumeirah Beach Park (9,6 km) va Jumeirah Public Beach (15,8 km).",
+  "hotelFeat": "Mehmonxona xususiyatlari",
+  "amenities": "Qulayliklar",
+  "confirmTitle": "Bandlovingizni tasdiqlang",
+  "yourtour": "Sizning sayohatingiz",
+  "creadit": "Kredit kartalari",
+  "bookeddetail": "Buyurtma qilingan tafsilotlar",
+  "congratulations": "Tabriklaymiz!",
+  "successTitle": "Sayohatingiz band qilindi!",
+  "reservedetail": "Rezervasyon tafsilotlari"
 }

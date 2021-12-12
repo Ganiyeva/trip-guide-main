@@ -7,7 +7,7 @@ const Col = styled.div`
   background: ${(props) => props.theme.headerBgColor};
   border: 1px solid ${(props) => props.theme.color5};
   border-radius: 20px;
-  margin-top: 49px;
+  margin: 49px 15px 15px;
   transition: box-shadow 0.3s ease-in-out;
   &:hover {
     box-shadow: 0px 15px 45px rgba(102, 102, 102, 0.1);
@@ -50,7 +50,7 @@ const Price = styled.span`
   font-size: 18px;
   line-height: 23px;
   color: #316BFF;
-  margin-left: 35px;
+  margin-left: 30px;
 `;
 
 const Texts = styled.span`
@@ -68,19 +68,19 @@ const Icon = styled.i`
   vertical-align: middle;
 `;
 
-const ExploreCard = () => {
+const ExploreCard = ({exploreObj}) => {
 
   const { t } = useTranslation();
 
   return (
     <Col>
-      <Img src="/img/explore.jpg" alt="" />
-      <Rating> <Star className="icon-star" /> 4.91 (147) </Rating>
-      <Space> Comfort Space </Space>
-      <Price> $210 </Price>
-      <Texts style={{ fontWeight: "500", marginTop: "9px" }}> 1.2 km to Town Center </Texts>
-      <Texts style={{ fontWeight: "400", marginTop: "15px" }}> <Icon className="icon-location" /> Turkey, Mamaris </Texts>
-      <Texts style={{ fontWeight: "500", marginTop: "8px" }}> <Icon className="icon-room" /> {t('rooms')} 375 </Texts>
+      <Img src={`/img/${exploreObj.image}`} alt={exploreObj.title} />
+      <Rating> <Star className="icon-star" /> {exploreObj.rating} </Rating>
+      <Space> {exploreObj.title} </Space>
+      <Price> ${exploreObj.price} </Price>
+      <Texts style={{ fontWeight: "500", marginTop: "9px" }}> {exploreObj.radius} to Town Center </Texts>
+      <Texts style={{ fontWeight: "400", marginTop: "15px" }}> <Icon className="icon-location" /> {exploreObj.location} </Texts>
+      <Texts style={{ fontWeight: "500", marginTop: "8px" }}> <Icon className="icon-room" /> {t('rooms')} {exploreObj.rooms} </Texts>
     </Col>
   );
 
